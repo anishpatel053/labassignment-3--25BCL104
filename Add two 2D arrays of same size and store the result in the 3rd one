@@ -1,29 +1,13 @@
-#include <stdio.h>
-int main() {
-int rows = 3, cols = 3;
-int a[3][3] = {
-       {6, 9, 8},
-       {22, 1, 4},
-       {7, 2, 6}
-    };
-int b[3][3] = {
-       {4, 9, 19},
-       {7, 5, 11},
-       {13, 0, 1}
-    };
-int sum[3][3];
-
-for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < cols; j++) {
-            sum[i][j] = a[i][j] + b[i][j];
-        }
-    }
-printf("sum of the two arrays:\n");
-    for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < cols; j++) {
-            printf("%d ", sum[i][j]);
-        }
-printf("\n");
-    }
-return 0;
-}
+ #include <stdio.h>
+ int main() {
+    int a[2][2], b[2][2], c[2][2], i, j;
+    printf("Enter elements of first 2x2 matrix:\n");
+    for(i=0;i<2;i++) for(j=0;j<2;j++) scanf("%d",&a[i][j]);
+    printf("Enter elements of second 2x2 matrix:\n");
+    for(i=0;i<2;i++) for(j=0;j<2;j++) scanf("%d",&b[i][j]);
+    for(i=0;i<2;i++) for(j=0;j<2;j++) c[i][j] = a[i][j] + b[i][j];
+    printf("Sum:\n");
+    for(i=0;i<2;i++){ for(j=0;j<2;j++) printf("%d ",c[i][j]); printf("\n");}
+    return 0;
+ }
+ }
