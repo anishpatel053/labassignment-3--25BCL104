@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main() {
+int A[3][3] = {
+       {6, 9, 8},
+       {22, 1, 4},
+       {7, 2, 6}};
+int B[3][3] = {
+       {4, 9, 19},
+       {7, 5, 11},
+       {13, 0, 1}};
+int C[3][3];
+int i,j,k;
+ for(i = 0; i<3;i++) {
+    for(j = 0; j<3;j++)
+     {
+C[i][j] = 0;
+  for(k = 0;k<3;k++)
+      {
+        C[i][j] += A[i][k]*B[k][j];
+      }
+     }
+    }
+printf("multiplication of matrix C=\n");
+for(i =0;i<3;i++) {
+    for(j =0;j<3;j++)
+        {
+printf("%d\t",C[i][j]);
+        }
+printf("\n");
+}
+return 0;
+}
